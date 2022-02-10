@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">KoClock</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="paired_devices">Сопряженные устройства</string>
+    <string name="new_devices">Новые устройства</string>
+    <string name="find_dev">Поиск устройств</string>
+    <string name="end_night_mode">Конец</string>
+    <string name="tempetature">Температура</string>
+    <string name="light_level">Уровень свечения индикаторов %</string>
+    <string name="default_temperature">неизвестно</string>
+    <string name="day_level">Днем</string>
+    <string name="night_level">Ночью</string>
+    <string name="nihgt_mode">Ночной режим</string>
+    <string name="start_night_mode">Начало</string>
+    <string name="sinc_time">Синхронизировать время</string>
+    <string name="save_settings">Сохранить настройки</string>
+    <string name="default_day_level">90</string>
+    <string name="default_night_start">22:00</string>
+    <string name="default_night_end">7:00</string>
+    <string name="default_night_level">10</string>
+    <string name="connect">Подключить часы</string>
+    <string name="connect_ok">Connect OK</string>
+</resources>
