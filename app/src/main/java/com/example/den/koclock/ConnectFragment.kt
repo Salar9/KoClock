@@ -57,8 +57,8 @@ class ConnectFragment : Fragment() {
             val lstValues: List<String> = (itemClicked as TextView).text.split(" ").map { it.trim() }
             val subscribe1 = koClockViewModel.bluetooth.connectToDevice(lstValues[0]).subscribe(
                 {
-                    Log.i(TAG, getString(R.string.connect_ok))
-                    Toast.makeText(requireActivity(), getString(R.string.connect_ok), Toast.LENGTH_SHORT).show()
+                    Log.i(TAG, "Connect OK")
+                    Toast.makeText(requireActivity(), "Connect OK", Toast.LENGTH_SHORT).show()
                     requireActivity().supportFragmentManager.popBackStack()
 
                 },
