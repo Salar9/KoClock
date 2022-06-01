@@ -47,7 +47,7 @@ class BluetoothObject private constructor(context: Context, activity: Activity){
     init {
         if (ActivityCompat.checkSelfPermission(context, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
             Log.i(TAG, "Permission is not granted")
-            ActivityCompat.requestPermissions(activity, arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION), MY_PERMISSIONS_REQUEST_READ_CONTACTS)
+            ActivityCompat.requestPermissions(activity, arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_BACKGROUND_LOCATION), MY_PERMISSIONS_REQUEST_READ_CONTACTS)
         }
         if (!bluetooth.isEnabled) {
             val enableBT = Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE)
@@ -133,6 +133,7 @@ class BluetoothObject private constructor(context: Context, activity: Activity){
             context.registerReceiver(mReceiver, filter) // Не забудьте снять регистрацию в onDestroy
 
             if (bluetooth.isDiscovering) bluetooth.cancelDiscovery()
+
             if(!bluetooth.startDiscovery()){
                 Log.i(TAG, "Disco ERR")
                 e.onError(IllegalStateException("Discovery ERROR"))
